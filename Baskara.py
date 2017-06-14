@@ -2,21 +2,20 @@
 
 a = float(input("Qual o valor de a?:"))
 b = float(input("Qual o valor de b?:"))
-c = float(input("Qual o valor de c?"))
+c = float(input("Qual o valor de c?:"))
 
 delta = (b**2) - (4*a*c) 
 
-if delta == 0:
-	raiz1 = (-b + math.sqrt(delta)) / (2 * a)
-	print("Somente uma raiz:", raiz1)
+if delta  < 0:
+	print("esta equação não possui raízes reais")
 else:
-	if delta < 0:
-		print("Esta equação não possue raizes reais")
+	if delta == 0:
+		raiz1 = (-b + math.sqrt(delta)) / (2 * a)
+		print("a raiz desta equação é", raiz1)
 	else:
 		raiz1 = (-b + math.sqrt(delta)) / (2 * a)
 		raiz2 = (-b - math.sqrt(delta)) / (2 * a)
-		print("A primeira raiz é:", raiz1)
-		print("A segunda raiz é :", raiz2)
+		print("as raízes da equação são",raiz2, "e", raiz1)
 
 	
 
